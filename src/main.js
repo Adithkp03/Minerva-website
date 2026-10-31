@@ -278,6 +278,8 @@ function summary() {
     `Date: ${d}`,
     `City / venue: ${fields.city.value.trim()}`
   ]
+  const dur = $('#f-duration').value; if (dur) lines.push(`Set duration: ${dur}`)
+  const aud = $('#f-audience').value.trim(); if (aud) lines.push(`Expected audience: ${aud}`)
   const n = $('#f-note').value.trim(); if (n) lines.push(`Notes: ${n}`)
   return lines.join('\n')
 }

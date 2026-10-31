@@ -286,6 +286,16 @@
       <article class="why-card"><p class="why-num mono">03</p><h3>High-energy performance</h3><p>Built for college fests, weddings and private events.</p></article>
       <article class="why-card"><p class="why-num mono">04</p><h3>Custom sets</h3><p>Tell us the audience and vibe. We'll build the set around it.</p></article>
     </div>
+    <div class="formats">
+      <p class="label mono"><i></i>Performance formats</p>
+      <ul class="format-list mono">
+        <li>30-minute set</li>
+        <li>45-minute set</li>
+        <li>60-minute set</li>
+        <li>90-minute set</li>
+        <li>Extended sets by arrangement</li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -304,6 +314,11 @@
           </select><p class="err" id="e-event" role="alert"></p></div>
         <div class="field"><label for="f-date">Date <span>(approx. is fine)</span></label><input id="f-date" name="date" type="date"></div>
         <div class="field"><label for="f-city">City / venue</label><input id="f-city" name="city" type="text" autocomplete="address-level2" required><p class="err" id="e-city" role="alert"></p></div>
+        <div class="field"><label for="f-duration">Set duration <span>(optional)</span></label>
+          <select id="f-duration" name="duration">
+            <option value="">Select</option><option>30-minute set</option><option>45-minute set</option><option>60-minute set</option><option>90-minute set</option><option>Extended set by arrangement</option><option>Not sure yet</option>
+          </select></div>
+        <div class="field"><label for="f-audience">Expected audience <span>(optional)</span></label><input id="f-audience" name="audience" type="text" inputmode="numeric" placeholder="e.g. 500"></div>
         <div class="field full"><label for="f-note">Anything else <span>(optional)</span></label><textarea id="f-note" name="note" rows="3"></textarea></div>
         <div class="form-actions full">
           <button type="submit" class="btn btn-red" data-magnet><span>WhatsApp Minerva</span><svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6" fill="none" stroke="currentColor" stroke-width="2"/></svg></button>
