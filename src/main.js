@@ -234,6 +234,19 @@ if (vid) {
     })
   }, { threshold: .35 })
   io.observe(vid)
+
+  const soundBtn = $('.wed-video .sound')
+  if (soundBtn) {
+    const txt = $('.sound-txt', soundBtn)
+    soundBtn.addEventListener('click', () => {
+      const on = vid.muted
+      vid.muted = !on
+      soundBtn.setAttribute('aria-pressed', String(on))
+      soundBtn.setAttribute('aria-label', on ? 'Turn sound off' : 'Turn sound on')
+      if (txt) txt.textContent = on ? 'Sound on' : 'Sound off'
+      if (on) { const p = vid.play(); p && p.catch(() => {}) }
+    })
+  }
 }
 
 /* ---------- booking form ---------- */
