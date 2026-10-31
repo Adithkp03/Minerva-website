@@ -220,9 +220,11 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .phone::after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(to top,rgba(5,5,5,.55),transparent 30%)}
 .sound{position:absolute;z-index:3;left:14px;bottom:14px;display:flex;align-items:center;gap:10px;padding:10px 16px;border-radius:999px;background:rgba(5,5,5,.7);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border:1px solid rgba(243,239,233,.3);font-size:.78rem;letter-spacing:.1em;text-transform:uppercase;transition:background .3s}
 .sound:hover{background:var(--red)}
-.sound-ico{width:14px;height:14px;border:2px solid currentColor;border-radius:50% 0 0 50%;border-right:0;position:relative}
-.sound-ico::after{content:'';position:absolute;right:-6px;top:-4px;width:6px;height:14px;border-radius:0 50% 50% 0;border:2px solid currentColor;border-left:0;opacity:0}
-.sound[aria-pressed=true] .sound-ico::after{opacity:1}
+.sound-ico{flex:none}
+.sound-ico .ico-mute{display:block}
+.sound-ico .ico-waves{display:none}
+.sound[aria-pressed=true] .sound-ico .ico-mute{display:none}
+.sound[aria-pressed=true] .sound-ico .ico-waves{display:block}
 .wed-cap{color:var(--dim);text-align:center}
 @media (max-width:900px){.wed-grid{grid-template-columns:1fr}.wed-video{order:-1}}
 
