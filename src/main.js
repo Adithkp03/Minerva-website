@@ -12,7 +12,7 @@ const $ = (s, r = document) => r.querySelector(s)
 const $$ = (s, r = document) => [...r.querySelectorAll(s)]
 
 const WA = '919645774936'
-const EMAIL = 'adithkp03@gmail.com'
+const EMAIL = 'bandminervaofficial@gmail.com'
 
 /* ---------- smooth scroll ---------- */
 let lenis = null
@@ -188,7 +188,7 @@ $$('[data-count]').forEach(el => {
 
 /* ---------- reveals ---------- */
 if (!reduce) {
-  gsap.utils.toArray('.label,.h2,.book-title,.about-copy,.stat,.about-photo,.wed-points,.wed-copy .btn,.phone,.wed-cap,.form .field,.form-actions,.contact .c-row,.footer-logo').forEach(el => el.classList.add('rv'))
+  gsap.utils.toArray('.label,.h2,.book-title,.book-sub,.about-copy,.stat,.about-photo,.wed-points,.wed-copy .btn,.phone,.wed-cap,.form .field,.form-actions,.contact .c-row,.footer-logo,.podium,.event-row,.why-card,.quote').forEach(el => el.classList.add('rv'))
   ScrollTrigger.batch('.rv', {
     start: 'top 90%', once: true,
     onEnter: b => gsap.to(b, { opacity: 1, y: 0, duration: 1, ease: 'power3.out', stagger: .09, overwrite: true })
