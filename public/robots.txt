@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://minerva-website-blond.vercel.app/sitemap.xml
