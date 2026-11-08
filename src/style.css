@@ -289,20 +289,21 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .results{padding:clamp(90px,14vw,200px) 0;border-top:1px solid var(--line)}
 .results-head{margin-bottom:clamp(36px,6vw,80px)}
 .results-head .about-copy{margin-top:24px}
-.podiums{display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:clamp(14px,2vw,28px);align-items:start}
+.podiums{display:grid;grid-template-columns:1fr;gap:clamp(14px,2vw,28px);align-items:start}
 .podium{border:1px solid var(--line);border-radius:4px;padding:clamp(22px,3vw,36px);background:linear-gradient(180deg,rgba(243,239,233,.03),transparent)}
 .podium:first-child{border-color:rgba(227,7,28,.55);background:linear-gradient(180deg,rgba(227,7,28,.14),transparent 75%)}
 .podium-place{display:flex;align-items:baseline;justify-content:space-between;gap:16px;padding-bottom:18px;border-bottom:1px solid var(--line)}
-.podium-rank{font-family:var(--display);font-size:clamp(3.6rem,7vw,6.4rem);line-height:1;color:var(--red-hot)}
+.podium-rank{font-family:var(--display);text-transform:uppercase;font-size:clamp(2.6rem,5vw,4.4rem);line-height:1;color:var(--red-hot)}
 .podium-rank sup{font-size:.35em;margin-left:.06em}
 .podium:not(:first-child) .podium-rank{color:var(--white);opacity:.85}
 .podium-count{color:var(--dim)}
-.podium-list{list-style:none}
+.podium-list{list-style:none;display:grid;grid-template-columns:repeat(3,1fr);column-gap:clamp(20px,3vw,48px)}
 .podium-list li{display:flex;flex-direction:column;gap:5px;padding:16px 0;border-bottom:1px solid var(--line)}
-.podium-list li:last-child{border-bottom:0;padding-bottom:0}
+.podium-list li:nth-last-child(-n+3){border-bottom:0}
 .pf{font-family:var(--display);text-transform:uppercase;font-size:clamp(1.3rem,1.9vw,1.8rem);line-height:1.05;letter-spacing:.02em}
 .pc{color:var(--dim);font-size:.66rem;line-height:1.5}
-@media (max-width:900px){.podiums{grid-template-columns:1fr}}
+@media (max-width:900px){.podium-list{grid-template-columns:repeat(2,1fr)}.podium-list li:nth-last-child(-n+3){border-bottom:1px solid var(--line)}.podium-list li:last-child{border-bottom:0}}
+@media (max-width:560px){.podium-list{grid-template-columns:1fr}}
 
 /* events */
 .events{padding:clamp(90px,14vw,200px) 0 clamp(60px,8vw,120px);border-top:1px solid var(--line)}
