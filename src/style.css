@@ -257,6 +257,13 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .c-row span{color:var(--dim)}
 .c-row strong{font-family:var(--display);font-weight:400;font-size:clamp(1.5rem,2.6vw,2.2rem);letter-spacing:.02em;word-break:break-word}
 .c-row:hover{padding-left:14px;color:var(--red-hot)}
+@media (min-width:901px){
+  .book-grid{align-items:stretch}
+  .contact{grid-auto-rows:1fr;align-content:stretch}
+  .c-row{justify-content:center;padding:14px 0}
+  .c-row strong{font-size:clamp(1.3rem,2.1vw,1.9rem);word-break:normal;white-space:nowrap}
+  .c-row[href^="mailto"] strong{font-size:clamp(1rem,1.7vw,1.5rem)}
+}
 @media (max-width:900px){.book-grid{grid-template-columns:1fr}}
 @media (max-width:520px){.form{grid-template-columns:1fr}.form-actions .btn{flex:1 1 100%;justify-content:center}}
 
