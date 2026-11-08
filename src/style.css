@@ -142,6 +142,7 @@ button{font:inherit;color:inherit;background:none;border:0;cursor:pointer}
 .about-big .w{color:rgba(243,239,233,.18);transition:color .25s}
 .about-big .w.on{color:var(--white)}
 .about-copy{margin-top:36px;max-width:560px;color:rgba(243,239,233,.78);font-size:clamp(1rem,1.3vw,1.12rem)}
+.about-copy+.about-copy{margin-top:18px}
 .about-right{display:grid;gap:0}
 .stat{display:flex;align-items:baseline;justify-content:space-between;gap:24px;padding:26px 0;border-top:1px solid var(--line)}
 .stat:nth-of-type(3){border-bottom:1px solid var(--line)}
